@@ -44,5 +44,3 @@ This is the final project for Bailey Brooke , Marc Picard and Karen Mafuma
   - On Update, allow changing of module information.
   - On Delete, allow deleting of module information.
   - Implement a Search functionality to search for a particular module's information using the Module Code. 
-
-For more information, please visit our [FAQ page](/faq).

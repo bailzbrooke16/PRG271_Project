@@ -15,6 +15,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		users.txt = users.txt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL-Scripts", "SQL-Scripts", "{445AB724-C0B3-4BB1-9EDC-6FBE6A598C5A}"
+	ProjectSection(SolutionItems) = preProject
+		Modules.sql = Modules.sql
+		Seed-Modules.sql = Seed-Modules.sql
+		Seed-Students.sql = Seed-Students.sql
+		Students.sql = Students.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +44,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{445AB724-C0B3-4BB1-9EDC-6FBE6A598C5A} = {13207DDA-7C9D-4267-8CFD-81F97D3E0B2A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3579EE60-023F-462F-990C-67EC83FE1D18}

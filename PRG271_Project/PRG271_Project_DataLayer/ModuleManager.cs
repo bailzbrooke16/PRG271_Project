@@ -7,34 +7,34 @@ using System.Threading.Tasks;
 
 namespace PRG271_Project_DataLayer
 {
-    public class StudentManager
+    public class ModuleManager
     {
         private string _connectionString;
-        public StudentManager(string connectionString) {
+        public ModuleManager(string connectionString) {
             this._connectionString = connectionString;
         }
 
-        public List<Student> GetStudents()
+        public List<Module> GetModules()
         {
-            return new List<Student>();
+            return new List<Module>();
         }
 
-        public Student GetStudent(int id)
-        {
-            return null;
-        }
-
-        public Student CreateStudent(Student student)
+        public Module GetModule(int id)
         {
             return null;
         }
 
-        public void DeleteStudent(int id)
+        public Module CreateModule(Module module)
+        {
+            return null;
+        }
+
+        public void DeleteModule(int id)
         {
 
         }
 
-        public Student UpdateStudent(int id, Student student)
+        public Module UpdateModule(int id, Module module)
         {
             return null;
         }

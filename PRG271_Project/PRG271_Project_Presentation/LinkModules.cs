@@ -1,4 +1,5 @@
-﻿using PRG271_Project_Services;
+﻿using PRG271_Project_DataLayer.Models;
+using PRG271_Project_Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,20 @@ namespace PRG271_Project_Presentation
     public partial class LinkModules : Form
     {
         private StudentService _studentService;
+        private LinkingService _linkingService;
         public LinkModules()
         {
             this._studentService = new StudentService();
+            this._linkingService = new LinkingService();
             InitializeComponent();
-            this.cmb_students.DataSource = this._studentService.GetStudents();
+            List<Student> students = this._studentService.GetStudents();
+            this.cmb_students.DataSource = students;
             this.cmb_students.DisplayMember = "Name";
+
+            this.dg_Selected.DataSource = this._linkingService.GetActiveModules(students[0].Number);
+            this.dg_unselected.DataSource = this._linkingService.GetUnActiveModules(students[0].Number);
+
+
         }
 
         private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)

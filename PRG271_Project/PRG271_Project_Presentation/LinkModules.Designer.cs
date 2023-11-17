@@ -63,7 +63,7 @@
             dg_Selected.Name = "dg_Selected";
             dg_Selected.RowHeadersWidth = 82;
             dg_Selected.RowTemplate.Height = 41;
-            dg_Selected.Size = new Size(619, 709);
+            dg_Selected.Size = new Size(963, 709);
             dg_Selected.TabIndex = 1;
             // 
             // label1
@@ -81,7 +81,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1360, 40);
+            menuStrip1.Size = new Size(2069, 40);
             menuStrip1.TabIndex = 3;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -130,39 +130,39 @@
             // createModuleToolStripMenuItem
             // 
             createModuleToolStripMenuItem.Name = "createModuleToolStripMenuItem";
-            createModuleToolStripMenuItem.Size = new Size(359, 44);
+            createModuleToolStripMenuItem.Size = new Size(308, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
             createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
             // 
             // viewModulesToolStripMenuItem
             // 
             viewModulesToolStripMenuItem.Name = "viewModulesToolStripMenuItem";
-            viewModulesToolStripMenuItem.Size = new Size(359, 44);
+            viewModulesToolStripMenuItem.Size = new Size(308, 44);
             viewModulesToolStripMenuItem.Text = "View Modules";
             viewModulesToolStripMenuItem.Click += viewModulesToolStripMenuItem_Click;
             // 
             // searchModuleToolStripMenuItem
             // 
             searchModuleToolStripMenuItem.Name = "searchModuleToolStripMenuItem";
-            searchModuleToolStripMenuItem.Size = new Size(359, 44);
+            searchModuleToolStripMenuItem.Size = new Size(308, 44);
             searchModuleToolStripMenuItem.Text = "Search Module";
             searchModuleToolStripMenuItem.Click += searchModuleToolStripMenuItem_Click;
             // 
             // dg_unselected
             // 
             dg_unselected.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dg_unselected.Location = new Point(674, 135);
+            dg_unselected.Location = new Point(1086, 135);
             dg_unselected.Name = "dg_unselected";
             dg_unselected.RowHeadersWidth = 82;
             dg_unselected.RowTemplate.Height = 41;
-            dg_unselected.Size = new Size(645, 709);
+            dg_unselected.Size = new Size(997, 709);
             dg_unselected.TabIndex = 4;
             // 
             // LinkModules
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1360, 856);
+            ClientSize = new Size(2069, 856);
             Controls.Add(dg_unselected);
             Controls.Add(menuStrip1);
             Controls.Add(label1);

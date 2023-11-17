@@ -25,9 +25,23 @@ namespace PRG271_Project_Presentation
             this.cmb_students.DataSource = students;
             this.cmb_students.DisplayMember = "Name";
 
-            this.dg_Selected.DataSource = this._linkingService.GetActiveModules(students[0].Number);
-            this.dg_unselected.DataSource = this._linkingService.GetUnActiveModules(students[0].Number);
+           
 
+            DataGridViewButtonColumn removeButtonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Remove",
+                Text = "Remove",
+                UseColumnTextForButtonValue = true
+            };
+            this.dg_Selected.Columns.Add(removeButtonColumn);
+
+            DataGridViewButtonColumn AddButtonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Add",
+                Text = "Add",
+                UseColumnTextForButtonValue = true
+            };
+            this.dg_unselected.Columns.Add(AddButtonColumn);
 
         }
 
@@ -82,7 +96,60 @@ namespace PRG271_Project_Presentation
 
         private void cmb_students_SelectedIndexChanged(object sender, EventArgs e)
         {
+            ComboBox comboBox = (ComboBox)sender;
 
+            if (comboBox.SelectedItem is Student selectedStudent)
+            {
+                this.dg_Selected.DataSource = this._linkingService.GetActiveModules(selectedStudent.Number);
+                this.dg_unselected.DataSource = this._linkingService.GetUnActiveModules(selectedStudent.Number);
+            }
+        }
+
+        private void dg_unselected_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+
+            if (e.RowIndex >= 0)
+            {
+                //Get where the change occured
+                int rowIndex = e.RowIndex;
+
+                if (dataGridView.CurrentCell.EditedFormattedValue == "Add")
+                {
+                    Student student = (Student)this.cmb_students.SelectedItem;
+                    Module module = this._linkingService.GetUnActiveModules(student.Number)[rowIndex] ;
+                    if (student != null)
+                    {
+                        this._linkingService.AddModuleLink(student.Number, module.Code);
+                        this.dg_Selected.DataSource = this._linkingService.GetActiveModules(student.Number);
+                        this.dg_unselected.DataSource = this._linkingService.GetUnActiveModules(student.Number);
+                    }
+                }
+            }
+            
+        }
+
+        private void dg_Selected_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+
+            if (e.RowIndex >= 0)
+            {
+                //Get where the change occured
+                int rowIndex = e.RowIndex;
+
+                if (dataGridView.CurrentCell.EditedFormattedValue == "Remove")
+                {
+                    Student student = (Student)this.cmb_students.SelectedItem;
+                    Module module = this._linkingService.GetActiveModules(student.Number)[rowIndex];
+                    if (student != null)
+                    {
+                        this._linkingService.RemoveModuleLink(student.Number, module.Code);
+                        this.dg_Selected.DataSource = this._linkingService.GetActiveModules(student.Number);
+                        this.dg_unselected.DataSource = this._linkingService.GetUnActiveModules(student.Number);
+                    }
+                }
+            }
         }
     }
 }

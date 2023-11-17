@@ -53,14 +53,14 @@ namespace PRG271_Project_Services
 
         }
 
-        public void AddModuleLink()
+        public void AddModuleLink(int? StudentID , int? ModuleID)
         {
-
+            this._dataManager.CreateLink(StudentID, ModuleID);
         }
 
-        public void RemoveModuleLink()
+        public void RemoveModuleLink(int? StudentID , int? ModuleID)
         {
-
+            this._dataManager.DeleteLink(StudentID, ModuleID); 
         }
     }
 }

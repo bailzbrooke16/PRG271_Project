@@ -86,12 +86,12 @@ namespace PRG271_Project_DataLayer
             return this._linkManager.GetLinks();
         }
 
-        public void CreateLink(int StudentID , int ModuleID)
+        public void CreateLink(int? StudentID , int? ModuleID)
         {
             this._linkManager.CreateLink( ModuleID , StudentID);
         }
 
-        public void DeleteLink(int StudentID, int ModuleID)
+        public void DeleteLink(int? StudentID, int? ModuleID)
         {
             this._linkManager.DeleteLink(ModuleID, StudentID);
         }

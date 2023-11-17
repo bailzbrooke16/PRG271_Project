@@ -65,6 +65,7 @@
             dg_Selected.RowTemplate.Height = 41;
             dg_Selected.Size = new Size(963, 709);
             dg_Selected.TabIndex = 1;
+            dg_Selected.CellContentClick += dg_Selected_CellContentClick;
             // 
             // label1
             // 
@@ -157,6 +158,7 @@
             dg_unselected.RowTemplate.Height = 41;
             dg_unselected.Size = new Size(997, 709);
             dg_unselected.TabIndex = 4;
+            dg_unselected.CellContentClick += dg_unselected_CellContentClick;
             // 
             // LinkModules
             // 

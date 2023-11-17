@@ -47,7 +47,7 @@ namespace PRG271_Project_DataLayer
             return links;
         }
 
-        public void DeleteLink(int moduleID , int studentID)
+        public void DeleteLink(int? moduleID , int? studentID)
         {
             using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
@@ -68,13 +68,13 @@ namespace PRG271_Project_DataLayer
 
         }
 
-        public void CreateLink(int moduleID, int studentID)
+        public void CreateLink(int? moduleID, int? studentID)
         {
             using (SqlConnection connection = new SqlConnection(this._connectionString))
             {
                 connection.Open();
 
-                string insertQuery = "INSERT INTO Modules ( StudentID, ModuleID) " +
+                string insertQuery = "INSERT INTO StudentModules ( StudentID, ModuleID) " +
                                      "VALUES (@StudentID, @ModuleID);" +
                                      "SELECT SCOPE_IDENTITY();";
 

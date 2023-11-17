@@ -11,7 +11,7 @@ namespace PRG271_Project_DataLayer.Models
         public int? Number { get; set; }
         public required string Name { get; set; }
         public required string Surname { get; set; }
-        public byte[]? Image { get; set; }
+        public byte? Image { get; set; }
         public DateTime DateOfBirth { get; set; }
         public string? Gender { get; set; }
         public string? Phone { get; set; }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PRG271_Project_Presentation
 {
-    public partial class StudentForm : Form
+    public partial class LinkModules : Form
     {
-        public StudentForm()
+        public LinkModules()
         {
             InitializeComponent();
         }

@@ -17,9 +17,10 @@ namespace PRG271_Project_Presentation
         private StudentService _studentService;
         public MainForm()
         {
-             this._studentService = new StudentService();
+            this._studentService = new StudentService();
             InitializeComponent();
             this.dg_students.DataSource = this._studentService.GetStudents();
+            this.dg_students.Columns[0].ReadOnly = true;
         }
 
         private void dg_students_CellEndEdit(object sender, DataGridViewCellEventArgs e)
@@ -28,14 +29,14 @@ namespace PRG271_Project_Presentation
             //Get where the change occured
             int rowIndex = e.RowIndex;
             int columnIndex = e.ColumnIndex;
-            
+
             //get the attribute and value that changed
             string attributeName = dataGridView.Columns[columnIndex].Name;
             object modifiedValue = dataGridView.Rows[rowIndex].Cells[columnIndex].Value;
-          
+
             //Get the student that the change occured to
             Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
-            
+
             //adjust the value for that student
             var property = modifiedStudent.GetType().GetProperty(attributeName);
             if (property != null && property.CanWrite)
@@ -46,6 +47,35 @@ namespace PRG271_Project_Presentation
             //Send that object off to be updated in the DB
             this._studentService.UpdateStudent(modifiedStudent.Number, modifiedStudent);
 
+        }
+
+        private void viewStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainForm mf = new MainForm();
+            mf.Show();
+            this.Dispose();
+
+        }
+
+        private void createStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateStudent cs = new CreateStudent();
+            this.Dispose();
+            cs.Show();
+        }
+
+        private void createModuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CreateModule cm = new CreateModule();
+            this.Dispose();
+            cm.Show();
+        }
+
+        private void linkModulesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LinkModules lm = new LinkModules();
+            this.Dispose();
+            lm.Show();
         }
     }
 }

@@ -1,4 +1,4 @@
-INSERT INTO Students (StudentID, Name, Surname, Image, DateOfBirth, Gender, Phone, Address)
+INSERT INTO Students (Number, Name, Surname, Image, DateOfBirth, Gender, Phone, Address)
 VALUES
     (1, 'John', 'Doe', NULL, '1990-01-01', 'Male', '123-456-7890', '123 Main St'),
     (2, 'Jane', 'Smith', NULL, '1995-05-15', 'Female', '987-654-3210', '456 Oak St'),
@@ -9,10 +9,10 @@ VALUES
 
 INSERT INTO StudentModules (StudentID, ModuleID)
 VALUES
-    (1, 1),
-    (1, 2), 
-    (2, 2), 
-    (3, 1),
-    (3, 3),
-    (4, 4),
-    (5, 5);
+    (1, 101),
+    (1, 102), 
+    (2, 102), 
+    (3, 101),
+    (3, 103),
+    (4, 104),
+    (5, 105);

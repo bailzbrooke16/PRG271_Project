@@ -18,6 +18,6 @@ CREATE TABLE StudentModules
     StudentID INT,
     ModuleID INT,
     PRIMARY KEY (StudentID, ModuleID),
-    FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-    FOREIGN KEY (ModuleID) REFERENCES Modules(ModuleID)
+    FOREIGN KEY (StudentID) REFERENCES Students(Number),
+    FOREIGN KEY (ModuleID) REFERENCES Modules(Code)
 );

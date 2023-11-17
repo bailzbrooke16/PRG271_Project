@@ -21,8 +21,8 @@ namespace PRG271_Project_Presentation
         private void btn_cancel_Click(object sender, EventArgs e)
         {
             Login l = new Login();
-            l.Show();
             this.Dispose();
+            l.Show();
         }
 
         private void btn_register_Click(object sender, EventArgs e)
@@ -55,8 +55,8 @@ namespace PRG271_Project_Presentation
                         if (result)
                         {
                             Login l = new Login();
-                            l.Show();
                             this.Dispose();
+                            l.Show();
                         }
                         else
                         {

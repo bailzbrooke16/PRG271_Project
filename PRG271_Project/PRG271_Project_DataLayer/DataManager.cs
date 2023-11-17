@@ -16,7 +16,7 @@ namespace PRG271_Project_DataLayer
         private const string filePath = @"C:\Users\Bailey\Documents\GitHub\PRG271_Project\PRG271_Project\users.txt";
         public DataManager()
         {
-            this._connectionString = "Data Source=(local);Initial Catalog=PRG271_Project;"
+            this._connectionString = @"Data Source=(local)\SQLEXPRESS;Initial Catalog=PRG271_Project;"
             + "Integrated Security=true";
             this._studentManager = new StudentManager(this._connectionString);
             this._moduleManager = new ModuleManager(this._connectionString);

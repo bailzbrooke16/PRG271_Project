@@ -1,6 +1,6 @@
 ﻿namespace PRG271_Project_Presentation
 {
-    partial class MainForm
+    partial class CreateStudent
     {
         /// <summary>
         /// Required designer variable.
@@ -35,9 +35,8 @@
             linkModulesToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
-            dg_students = new DataGridView();
+            label1 = new Label();
             menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dg_students).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -46,8 +45,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1755, 42);
-            menuStrip1.TabIndex = 0;
+            menuStrip1.Size = new Size(885, 42);
+            menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // studentsToolStripMenuItem
@@ -90,33 +89,30 @@
             createModuleToolStripMenuItem.Name = "createModuleToolStripMenuItem";
             createModuleToolStripMenuItem.Size = new Size(306, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
-            createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
             // 
-            // dg_students
+            // label1
             // 
-            dg_students.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dg_students.Location = new Point(5, 53);
-            dg_students.Name = "dg_students";
-            dg_students.RowHeadersWidth = 82;
-            dg_students.RowTemplate.Height = 41;
-            dg_students.Size = new Size(1750, 587);
-            dg_students.TabIndex = 1;
-            dg_students.CellEndEdit += dg_students_CellEndEdit;
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 17F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(268, 74);
+            label1.Name = "label1";
+            label1.RightToLeft = RightToLeft.No;
+            label1.Size = new Size(335, 53);
+            label1.TabIndex = 2;
+            label1.Text = "Create Student";
             // 
-            // MainForm
+            // CreateStudent
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1755, 640);
-            Controls.Add(dg_students);
+            ClientSize = new Size(885, 759);
+            Controls.Add(label1);
             Controls.Add(menuStrip1);
-            MainMenuStrip = menuStrip1;
-            Name = "MainForm";
+            Name = "CreateStudent";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Student Module Manager";
+            Text = "CreateStudent";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dg_students).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -129,7 +125,7 @@
         private ToolStripMenuItem createStudentToolStripMenuItem;
         private ToolStripMenuItem modulesToolStripMenuItem;
         private ToolStripMenuItem createModuleToolStripMenuItem;
-        private DataGridView dg_students;
+        private Label label1;
         private ToolStripMenuItem linkModulesToolStripMenuItem;
     }
 }

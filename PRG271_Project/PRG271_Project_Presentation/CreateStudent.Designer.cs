@@ -36,6 +36,19 @@
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            txt_name = new TextBox();
+            txt_surname = new TextBox();
+            txt_gender = new TextBox();
+            dt_dob = new DateTimePicker();
+            txt_phone = new TextBox();
+            txt_address = new TextBox();
+            Create = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,7 +58,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(885, 42);
+            menuStrip1.Size = new Size(885, 40);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -53,27 +66,27 @@
             // 
             studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 38);
+            studentsToolStripMenuItem.Size = new Size(127, 36);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(306, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(359, 44);
+            createStudentToolStripMenuItem.Size = new Size(306, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(359, 44);
+            linkModulesToolStripMenuItem.Size = new Size(306, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
@@ -81,7 +94,7 @@
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 38);
+            modulesToolStripMenuItem.Size = new Size(127, 36);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -101,11 +114,129 @@
             label1.TabIndex = 2;
             label1.Text = "Create Student";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(157, 191);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 32);
+            label2.TabIndex = 3;
+            label2.Text = "Name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(157, 246);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 32);
+            label3.TabIndex = 4;
+            label3.Text = "Surname";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(157, 316);
+            label4.Name = "label4";
+            label4.Size = new Size(92, 32);
+            label4.TabIndex = 5;
+            label4.Text = "Gender";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(157, 439);
+            label5.Name = "label5";
+            label5.Size = new Size(177, 32);
+            label5.TabIndex = 6;
+            label5.Text = "Phone Number";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(157, 501);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 32);
+            label6.TabIndex = 7;
+            label6.Text = "Address";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(157, 379);
+            label7.Name = "label7";
+            label7.Size = new Size(154, 32);
+            label7.TabIndex = 8;
+            label7.Text = "Date Of Birth";
+            // 
+            // txt_name
+            // 
+            txt_name.Location = new Point(392, 191);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(380, 39);
+            txt_name.TabIndex = 9;
+            // 
+            // txt_surname
+            // 
+            txt_surname.Location = new Point(392, 246);
+            txt_surname.Name = "txt_surname";
+            txt_surname.Size = new Size(380, 39);
+            txt_surname.TabIndex = 10;
+            // 
+            // txt_gender
+            // 
+            txt_gender.Location = new Point(392, 316);
+            txt_gender.Name = "txt_gender";
+            txt_gender.Size = new Size(380, 39);
+            txt_gender.TabIndex = 11;
+            // 
+            // dt_dob
+            // 
+            dt_dob.Location = new Point(392, 379);
+            dt_dob.Name = "dt_dob";
+            dt_dob.Size = new Size(380, 39);
+            dt_dob.TabIndex = 12;
+            // 
+            // txt_phone
+            // 
+            txt_phone.Location = new Point(392, 439);
+            txt_phone.Name = "txt_phone";
+            txt_phone.Size = new Size(380, 39);
+            txt_phone.TabIndex = 13;
+            // 
+            // txt_address
+            // 
+            txt_address.Location = new Point(392, 501);
+            txt_address.Name = "txt_address";
+            txt_address.Size = new Size(380, 39);
+            txt_address.TabIndex = 14;
+            // 
+            // Create
+            // 
+            Create.Location = new Point(303, 605);
+            Create.Name = "Create";
+            Create.Size = new Size(264, 72);
+            Create.TabIndex = 15;
+            Create.Text = "Create";
+            Create.UseVisualStyleBackColor = true;
+            // 
             // CreateStudent
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 759);
+            Controls.Add(Create);
+            Controls.Add(txt_address);
+            Controls.Add(txt_phone);
+            Controls.Add(dt_dob);
+            Controls.Add(txt_gender);
+            Controls.Add(txt_surname);
+            Controls.Add(txt_name);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Name = "CreateStudent";
@@ -127,5 +258,18 @@
         private ToolStripMenuItem createModuleToolStripMenuItem;
         private Label label1;
         private ToolStripMenuItem linkModulesToolStripMenuItem;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private TextBox txt_name;
+        private TextBox txt_surname;
+        private TextBox txt_gender;
+        private DateTimePicker dt_dob;
+        private TextBox txt_phone;
+        private TextBox txt_address;
+        private Button Create;
     }
 }

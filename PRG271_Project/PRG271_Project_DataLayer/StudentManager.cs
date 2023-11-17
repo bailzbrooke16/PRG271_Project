@@ -62,9 +62,38 @@ namespace PRG271_Project_DataLayer
             return null;
         }
 
-        public void DeleteStudent(int id)
+        public void DeleteStudent(int? id)
         {
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
+            {
+                connection.Open();
 
+                string deleteQuery = "delete from StudentModules " +
+                                     "WHERE StudentID = @StudentID";
+
+                using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@StudentID", id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+
+                }
+
+
+
+                deleteQuery = "delete from  Students " +
+                                     "WHERE Number = @Number";
+
+                using (SqlCommand command = new SqlCommand(deleteQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@Number", id);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+
+
+                }
+            }
         }
 
         public Student UpdateStudent(int? id, Student student)

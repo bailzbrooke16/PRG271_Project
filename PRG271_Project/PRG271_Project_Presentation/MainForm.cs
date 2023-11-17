@@ -21,21 +21,29 @@ namespace PRG271_Project_Presentation
             InitializeComponent();
             this.dg_students.DataSource = this._studentService.GetStudents();
             this.dg_students.Columns[0].ReadOnly = true;
+
+            DataGridViewButtonColumn deleteButtonColumn = new DataGridViewButtonColumn
+            {
+                HeaderText = "Delete",
+                Text = "Delete",
+                UseColumnTextForButtonValue = true
+            };
+            this.dg_students.Columns.Add(deleteButtonColumn);
         }
 
         private void dg_students_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
             DataGridView dataGridView = (DataGridView)sender;
+
             //Get where the change occured
             int rowIndex = e.RowIndex;
             int columnIndex = e.ColumnIndex;
 
+            //Get the student that the change occured to
+            Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
             //get the attribute and value that changed
             string attributeName = dataGridView.Columns[columnIndex].Name;
             object modifiedValue = dataGridView.Rows[rowIndex].Cells[columnIndex].Value;
-
-            //Get the student that the change occured to
-            Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
 
             //adjust the value for that student
             var property = modifiedStudent.GetType().GetProperty(attributeName);
@@ -76,6 +84,20 @@ namespace PRG271_Project_Presentation
             LinkModules lm = new LinkModules();
             this.Dispose();
             lm.Show();
+        }
+
+        private void dg_students_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+
+            //Get where the change occured
+            int rowIndex = e.RowIndex;
+
+
+            //Get the student that the change occured to
+            Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
+            this._studentService.DeleteStudent(modifiedStudent.Number);
+            this.dg_students.DataSource = this._studentService.GetStudents();
         }
     }
 }

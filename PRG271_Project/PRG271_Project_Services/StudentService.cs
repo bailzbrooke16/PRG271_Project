@@ -25,10 +25,10 @@ namespace PRG271_Project_Services
         //    return this._studentManager.CreateStudent(student);
         //}
 
-        //public void DeleteStudent(int id)
-        //{
-        //    this._studentManager.DeleteStudent(id);
-        //}
+        public void DeleteStudent(int? id)
+        {
+            this._dataManager.DeleteStudent(id);
+        }
 
         public Student UpdateStudent(int? id, Student student)
         {

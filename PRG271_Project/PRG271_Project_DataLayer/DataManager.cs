@@ -39,7 +39,7 @@ namespace PRG271_Project_DataLayer
             return this._studentManager.CreateStudent(student);
         }
 
-        public void DeleteStudent(int id)
+        public void DeleteStudent(int? id)
         {
            this._studentManager.DeleteStudent(id);
         }

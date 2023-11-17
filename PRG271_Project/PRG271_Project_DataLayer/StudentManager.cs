@@ -34,7 +34,7 @@ namespace PRG271_Project_DataLayer
 
         }
 
-        public Student UpdateStudent(int id, Student student)
+        public Student UpdateStudent(int? id, Student student)
         {
             return null;
         }

@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,7 @@ namespace PRG271_Project_DataLayer
         private string _connectionString;
         StudentManager _studentManager;
         ModuleManager _moduleManager;
+        private const string filePath = @"C:\Users\Bailey\Documents\GitHub\PRG271_Project\PRG271_Project\users.txt";
         public DataManager()
         {
             this._connectionString = "Data Source=(local);Initial Catalog=PRG271_Project;"
@@ -42,7 +44,7 @@ namespace PRG271_Project_DataLayer
            this._studentManager.DeleteStudent(id);
         }
 
-        public Student UpdateStudent(int id, Student student)
+        public Student UpdateStudent(int? id, Student student)
         {
             return this._studentManager.UpdateStudent(id, student);
         }
@@ -72,6 +74,72 @@ namespace PRG271_Project_DataLayer
         public Module UpdateModule(int id, Module module)
         {
             return this._moduleManager.UpdateModule(id, module);
+        }
+
+        #endregion
+
+        #region System Methods
+        public string GetLoginHash(string username)
+        {
+            try
+            {
+                using (var reader = new StreamReader(filePath))
+                {
+                    while (!reader.EndOfStream)
+                    {
+                        string line = reader.ReadLine();
+
+                        string[] fields = line.Split(',');
+                        if (fields[0] == username)
+                        {
+                            return fields[1];
+                        }
+                    }
+                }
+                return "error";
+            }
+            catch(Exception ex) {
+                return "error";
+            }
+            
+        }
+
+        public Boolean Register(string username, string hashedPassword)
+        {
+            try
+            {
+                try
+                {
+                    using (var reader = new StreamReader(filePath))
+                    {
+                        while (!reader.EndOfStream)
+                        {
+                            string line = reader.ReadLine();
+
+                            string[] fields = line.Split(',');
+                            if (fields[0] == username)
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return false;
+                }
+                
+                using (StreamWriter writer = new StreamWriter(filePath, true))
+                {
+                    writer.WriteLineAsync(username + "," + hashedPassword);
+                }
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+            
         }
 
         #endregion

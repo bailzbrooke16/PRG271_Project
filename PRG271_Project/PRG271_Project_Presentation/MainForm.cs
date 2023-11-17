@@ -90,17 +90,22 @@ namespace PRG271_Project_Presentation
         {
             DataGridView dataGridView = (DataGridView)sender;
 
-            //Get where the change occured
-            int rowIndex = e.RowIndex;
+            if(e.RowIndex >= 0)
+            {
+                //Get where the change occured
+                int rowIndex = e.RowIndex;
 
-            //Get the student that the change occured to
-            Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
+                //Get the student that the change occured to
+                Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
 
-            if (dataGridView.CurrentCell.EditedFormattedValue == "Delete") {
-                this._studentService.DeleteStudent(modifiedStudent.Number);
-                this.dg_students.DataSource = this._studentService.GetStudents();
+                if (dataGridView.CurrentCell.EditedFormattedValue == "Delete")
+                {
+                    this._studentService.DeleteStudent(modifiedStudent.Number);
+                    this.dg_students.DataSource = this._studentService.GetStudents();
+                }
             }
-            
+           
+
         }
 
         private void searchStudentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,6 +113,13 @@ namespace PRG271_Project_Presentation
             SearchStudent ss = new SearchStudent();
             this.Dispose();
             ss.Show();
+        }
+
+        private void viewModulesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainModules mm = new MainModules();
+            mm.Show();
+            this.Dispose();
         }
     }
 }

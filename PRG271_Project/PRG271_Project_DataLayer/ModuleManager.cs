@@ -149,18 +149,18 @@ namespace PRG271_Project_DataLayer
             {
                 connection.Open();
 
-                string updateQuery = "UPDATE Students " +
+                string updateQuery = "UPDATE Modules " +
                                      "SET Name = @Name, " +
                                      "    Description = @Description, " +
-                                     "    URLLink = @URLLink, " +
+                                     "    URLLink = @URLLink " +
                                      "WHERE Code = @Code";
 
                 using (SqlCommand command = new SqlCommand(updateQuery, connection))
                 {
                     // Add parameters to the command
                     command.Parameters.AddWithValue("@Name", module.Name);
-                    command.Parameters.AddWithValue("@Surname", module.Description);
-                    command.Parameters.AddWithValue("@DateOfBirth", module.URLLink);
+                    command.Parameters.AddWithValue("@Description", module.Description);
+                    command.Parameters.AddWithValue("@URLLink", module.URLLink);
 
                     command.Parameters.AddWithValue("@Code", id);
 

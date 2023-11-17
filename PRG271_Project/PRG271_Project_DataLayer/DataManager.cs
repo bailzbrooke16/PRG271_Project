@@ -56,9 +56,9 @@ namespace PRG271_Project_DataLayer
             return this._moduleManager.GetModules();
         }
 
-        public Module GetModule()
+        public Module GetModule(int id)
         {
-            return this._moduleManager.GetModule(1);
+            return this._moduleManager.GetModule(id);
         }
 
         public Module CreateModule(Module module)

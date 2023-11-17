@@ -17,29 +17,29 @@ namespace PRG271_Project_Services
 
         }
 
-        //public List<Module> GetModules()
-        //{
-        //    return new List<Module>();
-        //}
+        public List<Module> GetModules()
+        {
+            return this._datamanager.GetModules();
+        }
 
-        //public Module GetModule(int id)
-        //{
-        //    return null;
-        //}
+        public Module GetModule(int id)
+        {
+            return this._datamanager.GetModule(id);
+        }
 
         public Module CreateModule(Module module)
         {
             return this._datamanager.CreateModule(module);
         }
 
-        //public void DeleteModule(int id)
-        //{
+        public void DeleteModule(int id)
+        {
+            this._datamanager.DeleteModule(id);
+        }
 
-        //}
-
-        //public Module UpdateModule(int id, Module module)
-        //{
-        //    return null;
-        //}
+        public Module UpdateModule(int id, Module module)
+        {
+            return this._datamanager.UpdateModule(id,module);
+        }
     }
 }

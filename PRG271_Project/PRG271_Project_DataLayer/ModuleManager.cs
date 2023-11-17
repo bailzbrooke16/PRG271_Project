@@ -17,7 +17,36 @@ namespace PRG271_Project_DataLayer
 
         public List<Module> GetModules()
         {
-            return new List<Module>();
+            List<Module> modules = new List<Module>();
+
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Modules"; 
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Module module = new Module
+                            {
+                                Code = (int)reader["Code"],
+                                Name = reader["Name"].ToString(),
+                                Description = reader["Description"].ToString(),
+                                URLLink = reader["URLLink"].ToString(),
+
+                            };
+
+                            modules.Add(module);
+                        }
+                    }
+                }
+            }
+
+            return modules;
         }
 
         public Module GetModule(int id)
@@ -46,7 +75,7 @@ namespace PRG271_Project_DataLayer
 
                     module.Code = newCode;
 
-                    // Return the created student
+                    // Return the created module
                     return module;
                 }
             }

@@ -44,5 +44,12 @@ namespace PRG271_Project_Presentation
             this.Dispose();
             lm.Show();
         }
+
+        private void searchStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchStudent ss = new SearchStudent();
+            this.Dispose();
+            ss.Show();
+        }
     }
 }

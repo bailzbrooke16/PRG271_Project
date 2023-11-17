@@ -54,12 +54,70 @@ namespace PRG271_Project_DataLayer
 
         public Student GetStudent(int id)
         {
+            using (SqlConnection connection = new SqlConnection(this._connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT * FROM Students WHERE Number = @Number"; // Replace with your SQL query
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Number",id);
+
+                    using (SqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            Student student = new Student
+                            {
+                                Number = (int)reader["Number"],
+                                Name = reader["Name"].ToString(),
+                                Surname = reader["Surname"].ToString(),
+                                DateOfBirth = (DateTime)reader["DateOfBirth"],
+                                Image = reader["Image"] as byte?,
+                                Gender = reader["Gender"].ToString(),
+                                Phone = reader["Phone"].ToString(),
+                                Address = reader["Address"].ToString(),
+                            };
+
+                            return student;
+                        }
+                    }
+                }
+            }
+
             return null;
         }
 
         public Student CreateStudent(Student student)
         {
-            return null;
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                connection.Open();
+
+                string insertQuery = "INSERT INTO Students (Name, Surname, DateOfBirth, Image, Gender, Phone, Address) " +
+                                     "VALUES (@Name, @Surname, @DateOfBirth, @Image, @Gender, @Phone, @Address);" +
+                                     "SELECT SCOPE_IDENTITY();";
+
+                using (SqlCommand command = new SqlCommand(insertQuery, connection))
+                {
+                    // Add parameters to the command
+                    command.Parameters.AddWithValue("@Name", student.Name);
+                    command.Parameters.AddWithValue("@Surname", student.Surname);
+                    command.Parameters.AddWithValue("@DateOfBirth", student.DateOfBirth);
+                    command.Parameters.AddWithValue("@Image", new byte[0]);
+                    command.Parameters.AddWithValue("@Gender", student.Gender);
+                    command.Parameters.AddWithValue("@Phone", student.Phone);
+                    command.Parameters.AddWithValue("@Address", student.Address);
+
+                    int newStudentID = Convert.ToInt32(command.ExecuteScalar());
+
+                    student.Number = newStudentID;
+
+                    // Return the created student
+                    return student;
+                }
+            }
         }
 
         public void DeleteStudent(int? id)

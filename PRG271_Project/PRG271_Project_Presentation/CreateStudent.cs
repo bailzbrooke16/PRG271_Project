@@ -1,4 +1,7 @@
-﻿using System;
+﻿using PRG271_Project_DataLayer;
+using PRG271_Project_DataLayer.Models;
+using PRG271_Project_Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +15,10 @@ namespace PRG271_Project_Presentation
 {
     public partial class CreateStudent : Form
     {
+        private StudentService _studentService;
         public CreateStudent()
         {
+            this._studentService = new StudentService();
             InitializeComponent();
         }
 
@@ -36,6 +41,48 @@ namespace PRG271_Project_Presentation
             LinkModules lm = new LinkModules();
             this.Dispose();
             lm.Show();
+        }
+
+        private void Create_Click(object sender, EventArgs e)
+        {
+            string name = this.txt_name.Text;
+            string surname = this.txt_surname.Text;
+            string gender = this.txt_gender.Text;
+            string phone = this.txt_phone.Text;
+            string address = this.txt_address.Text;
+            DateTime DOB = this.dt_dob.Value;
+
+            if (name != "" && surname != "" && gender != "" && phone != "" && address != "")
+            {
+                Student newStudent = new Student()
+                {
+                    Name = name,
+                    Surname = surname,
+                    Gender = gender,
+                    Phone = phone,
+                    Address = address,
+                    DateOfBirth = DOB,
+                    Image = null
+                };
+
+                this._studentService.CreateStudent(newStudent);
+                MainForm mf = new MainForm();
+                this.Dispose();
+                mf.Show();
+            }
+            else
+            {
+                lbl_error.Text = "There is missing field information";
+            }
+
+
+        }
+
+        private void searchStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchStudent ss = new SearchStudent();
+            this.Dispose();
+            ss.Show();
         }
     }
 }

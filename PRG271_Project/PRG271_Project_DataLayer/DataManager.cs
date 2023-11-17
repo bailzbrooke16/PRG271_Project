@@ -29,9 +29,9 @@ namespace PRG271_Project_DataLayer
             return this._studentManager.GetStudents();
         }
 
-        public Student GetStudent()
+        public Student GetStudent(int id)
         {
-            return this._studentManager.GetStudent(1);
+            return this._studentManager.GetStudent(id);
         }
 
         public Student CreateStudent(Student student)

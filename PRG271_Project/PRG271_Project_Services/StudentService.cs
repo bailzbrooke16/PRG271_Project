@@ -20,10 +20,15 @@ namespace PRG271_Project_Services
             return this._dataManager.GetStudents();
         }
 
-        //public Student CreateStudent(Student student)
-        //{
-        //    return this._studentManager.CreateStudent(student);
-        //}
+        public Student GetStudent(int id)
+        {
+            return this._dataManager.GetStudent(id);
+        }
+
+        public Student CreateStudent(Student student)
+        {
+            return this._dataManager.CreateStudent(student);
+        }
 
         public void DeleteStudent(int? id)
         {

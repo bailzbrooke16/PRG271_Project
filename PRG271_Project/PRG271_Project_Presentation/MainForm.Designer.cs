@@ -36,6 +36,7 @@
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
             dg_students = new DataGridView();
+            searchStudentToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_students).BeginInit();
             SuspendLayout();
@@ -46,35 +47,35 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(2235, 40);
+            menuStrip1.Size = new Size(2235, 42);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // studentsToolStripMenuItem
             // 
-            studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem });
+            studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 36);
+            studentsToolStripMenuItem.Size = new Size(127, 38);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(306, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(306, 44);
+            createStudentToolStripMenuItem.Size = new Size(359, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(306, 44);
+            linkModulesToolStripMenuItem.Size = new Size(359, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
@@ -82,7 +83,7 @@
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 36);
+            modulesToolStripMenuItem.Size = new Size(127, 38);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -103,6 +104,13 @@
             dg_students.TabIndex = 1;
             dg_students.CellContentClick += dg_students_CellContentClick;
             dg_students.CellEndEdit += dg_students_CellEndEdit;
+            // 
+            // searchStudentToolStripMenuItem
+            // 
+            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
+            searchStudentToolStripMenuItem.Size = new Size(359, 44);
+            searchStudentToolStripMenuItem.Text = "Search Student";
+            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -132,5 +140,6 @@
         private ToolStripMenuItem createModuleToolStripMenuItem;
         private DataGridView dg_students;
         private ToolStripMenuItem linkModulesToolStripMenuItem;
+        private ToolStripMenuItem searchStudentToolStripMenuItem;
     }
 }

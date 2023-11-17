@@ -2,15 +2,14 @@ USE PRG271_Project
 
 CREATE TABLE Students
 (
-    Number INT,
+    Number INT IDENTITY(1,1) PRIMARY KEY,
     Name VARCHAR(255) NOT NULL,
     Surname VARCHAR(255) NOT NULL,
     Image VARBINARY(MAX),
     DateOfBirth DATETIME NOT NULL,
     Gender VARCHAR(255),
     Phone VARCHAR(20),
-    Address VARCHAR(MAX),
-    CONSTRAINT PK_Students PRIMARY KEY (Number)
+    Address VARCHAR(MAX)
 );
 
 CREATE TABLE StudentModules

@@ -99,5 +99,12 @@ namespace PRG271_Project_Presentation
             this._studentService.DeleteStudent(modifiedStudent.Number);
             this.dg_students.DataSource = this._studentService.GetStudents();
         }
+
+        private void searchStudentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchStudent ss = new SearchStudent();
+            this.Dispose();
+            ss.Show();
+        }
     }
 }

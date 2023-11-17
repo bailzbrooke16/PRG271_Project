@@ -49,6 +49,8 @@
             txt_phone = new TextBox();
             txt_address = new TextBox();
             Create = new Button();
+            lbl_error = new Label();
+            searchStudentToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,35 +60,35 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(885, 40);
+            menuStrip1.Size = new Size(885, 42);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
             // studentsToolStripMenuItem
             // 
-            studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem });
+            studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 36);
+            studentsToolStripMenuItem.Size = new Size(127, 38);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(306, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(306, 44);
+            createStudentToolStripMenuItem.Size = new Size(359, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(306, 44);
+            linkModulesToolStripMenuItem.Size = new Size(359, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
@@ -94,7 +96,7 @@
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 36);
+            modulesToolStripMenuItem.Size = new Size(127, 38);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -218,12 +220,29 @@
             Create.TabIndex = 15;
             Create.Text = "Create";
             Create.UseVisualStyleBackColor = true;
+            Create.Click += Create_Click;
+            // 
+            // lbl_error
+            // 
+            lbl_error.AutoSize = true;
+            lbl_error.Location = new Point(94, 690);
+            lbl_error.Name = "lbl_error";
+            lbl_error.Size = new Size(0, 32);
+            lbl_error.TabIndex = 16;
+            // 
+            // searchStudentToolStripMenuItem
+            // 
+            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
+            searchStudentToolStripMenuItem.Size = new Size(359, 44);
+            searchStudentToolStripMenuItem.Text = "Search Student";
+            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
             // 
             // CreateStudent
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(885, 759);
+            Controls.Add(lbl_error);
             Controls.Add(Create);
             Controls.Add(txt_address);
             Controls.Add(txt_phone);
@@ -271,5 +290,7 @@
         private TextBox txt_phone;
         private TextBox txt_address;
         private Button Create;
+        private Label lbl_error;
+        private ToolStripMenuItem searchStudentToolStripMenuItem;
     }
 }

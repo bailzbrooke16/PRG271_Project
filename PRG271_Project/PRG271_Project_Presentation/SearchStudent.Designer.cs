@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label7 = new Label();
-            label6 = new Label();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
-            menuStrip1 = new MenuStrip();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
             studentsToolStripMenuItem = new ToolStripMenuItem();
             viewStudentsToolStripMenuItem = new ToolStripMenuItem();
             createStudentToolStripMenuItem = new ToolStripMenuItem();
@@ -43,6 +42,7 @@
             searchStudentToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
+            menuStrip1 = new MenuStrip();
             label8 = new Label();
             txt_search = new TextBox();
             btn_search = new Button();
@@ -56,60 +56,6 @@
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(90, 435);
-            label7.Name = "label7";
-            label7.Size = new Size(154, 32);
-            label7.TabIndex = 21;
-            label7.Text = "Date Of Birth";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(90, 557);
-            label6.Name = "label6";
-            label6.Size = new Size(98, 32);
-            label6.TabIndex = 20;
-            label6.Text = "Address";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(90, 495);
-            label5.Name = "label5";
-            label5.Size = new Size(177, 32);
-            label5.TabIndex = 19;
-            label5.Text = "Phone Number";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(90, 372);
-            label4.Name = "label4";
-            label4.Size = new Size(92, 32);
-            label4.TabIndex = 18;
-            label4.Text = "Gender";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(90, 302);
-            label3.Name = "label3";
-            label3.Size = new Size(109, 32);
-            label3.TabIndex = 17;
-            label3.Text = "Surname";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(90, 247);
-            label2.Name = "label2";
-            label2.Size = new Size(78, 32);
-            label2.TabIndex = 16;
-            label2.Text = "Name";
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -121,48 +67,92 @@
             label1.TabIndex = 15;
             label1.Text = "Search Student";
             // 
-            // menuStrip1
+            // label2
             // 
-            menuStrip1.ImageScalingSize = new Size(32, 32);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
-            menuStrip1.Location = new Point(0, 0);
-            menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(795, 42);
-            menuStrip1.TabIndex = 28;
-            menuStrip1.Text = "menuStrip1";
+            label2.AutoSize = true;
+            label2.Location = new Point(90, 247);
+            label2.Name = "label2";
+            label2.Size = new Size(78, 32);
+            label2.TabIndex = 16;
+            label2.Text = "Name";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(90, 302);
+            label3.Name = "label3";
+            label3.Size = new Size(109, 32);
+            label3.TabIndex = 17;
+            label3.Text = "Surname";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(90, 372);
+            label4.Name = "label4";
+            label4.Size = new Size(92, 32);
+            label4.TabIndex = 18;
+            label4.Text = "Gender";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(90, 495);
+            label5.Name = "label5";
+            label5.Size = new Size(177, 32);
+            label5.TabIndex = 19;
+            label5.Text = "Phone Number";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(90, 557);
+            label6.Name = "label6";
+            label6.Size = new Size(98, 32);
+            label6.TabIndex = 20;
+            label6.Text = "Address";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(90, 435);
+            label7.Name = "label7";
+            label7.Size = new Size(154, 32);
+            label7.TabIndex = 21;
+            label7.Text = "Date Of Birth";
             // 
             // studentsToolStripMenuItem
             // 
             studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 38);
+            studentsToolStripMenuItem.Size = new Size(127, 36);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(308, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(359, 44);
+            createStudentToolStripMenuItem.Size = new Size(308, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(359, 44);
+            linkModulesToolStripMenuItem.Size = new Size(308, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
             // searchStudentToolStripMenuItem
             // 
             searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
-            searchStudentToolStripMenuItem.Size = new Size(359, 44);
+            searchStudentToolStripMenuItem.Size = new Size(308, 44);
             searchStudentToolStripMenuItem.Text = "Search Student";
             searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
             // 
@@ -170,7 +160,7 @@
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 38);
+            modulesToolStripMenuItem.Size = new Size(127, 36);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -178,6 +168,16 @@
             createModuleToolStripMenuItem.Name = "createModuleToolStripMenuItem";
             createModuleToolStripMenuItem.Size = new Size(306, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
+            // 
+            // menuStrip1
+            // 
+            menuStrip1.ImageScalingSize = new Size(32, 32);
+            menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
+            menuStrip1.Location = new Point(0, 0);
+            menuStrip1.Name = "menuStrip1";
+            menuStrip1.Size = new Size(795, 40);
+            menuStrip1.TabIndex = 28;
+            menuStrip1.Text = "menuStrip1";
             // 
             // label8
             // 
@@ -294,20 +294,22 @@
         }
 
         #endregion
-        private Label label7;
-        private Label label6;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
+
         private Label label1;
-        private MenuStrip menuStrip1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
         private ToolStripMenuItem studentsToolStripMenuItem;
         private ToolStripMenuItem viewStudentsToolStripMenuItem;
         private ToolStripMenuItem createStudentToolStripMenuItem;
         private ToolStripMenuItem linkModulesToolStripMenuItem;
+        private ToolStripMenuItem searchStudentToolStripMenuItem;
         private ToolStripMenuItem modulesToolStripMenuItem;
         private ToolStripMenuItem createModuleToolStripMenuItem;
+        private MenuStrip menuStrip1;
         private Label label8;
         private TextBox txt_search;
         private Button btn_search;
@@ -318,6 +320,5 @@
         private Label lbl_result_phone;
         private Label lbl_result_address;
         private Label lbl_error;
-        private ToolStripMenuItem searchStudentToolStripMenuItem;
     }
 }

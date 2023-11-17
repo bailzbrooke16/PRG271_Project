@@ -13,6 +13,7 @@ namespace PRG271_Project_DataLayer
         private string _connectionString;
         StudentManager _studentManager;
         ModuleManager _moduleManager;
+        LinkManager _linkManager;
         private const string filePath = @"C:\Users\Bailey\Documents\GitHub\PRG271_Project\PRG271_Project\users.txt";
         public DataManager()
         {
@@ -20,6 +21,7 @@ namespace PRG271_Project_DataLayer
             + "Integrated Security=true";
             this._studentManager = new StudentManager(this._connectionString);
             this._moduleManager = new ModuleManager(this._connectionString);
+            this._linkManager = new LinkManager(this._connectionString);
         }
 
         #region Student Entry Methods
@@ -74,6 +76,24 @@ namespace PRG271_Project_DataLayer
         public Module UpdateModule(int id, Module module)
         {
             return this._moduleManager.UpdateModule(id, module);
+        }
+
+        #endregion
+
+        #region Student Module Linking
+        public List<Link> GetLinks()
+        {
+            return this._linkManager.GetLinks();
+        }
+
+        public void CreateLink(int StudentID , int ModuleID)
+        {
+            this._linkManager.CreateLink( ModuleID , StudentID);
+        }
+
+        public void DeleteLink(int StudentID, int ModuleID)
+        {
+            this._linkManager.DeleteLink(ModuleID, StudentID);
         }
 
         #endregion

@@ -90,7 +90,7 @@ namespace PRG271_Project_Presentation
         {
             DataGridView dataGridView = (DataGridView)sender;
 
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
                 //Get where the change occured
                 int rowIndex = e.RowIndex;
@@ -104,7 +104,7 @@ namespace PRG271_Project_Presentation
                     this.dg_students.DataSource = this._studentService.GetStudents();
                 }
             }
-           
+
 
         }
 
@@ -119,6 +119,13 @@ namespace PRG271_Project_Presentation
         {
             MainModules mm = new MainModules();
             mm.Show();
+            this.Dispose();
+        }
+
+        private void searchModuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchModule sm = new SearchModule();
+            sm.Show();
             this.Dispose();
         }
     }

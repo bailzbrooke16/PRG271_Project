@@ -63,11 +63,11 @@ namespace PRG271_Project_Presentation
             string description = this.txt_description.Text;
             string url = this.txt_url.Text;
 
-            if(name != "")
+            if (name != "")
             {
-                if(description != "")
+                if (description != "")
                 {
-                    if(url != "")
+                    if (url != "")
                     {
                         Module newModule = new Module()
                         {
@@ -83,7 +83,21 @@ namespace PRG271_Project_Presentation
                 }
             }
 
-           
+
+        }
+
+        private void viewModulesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MainModules mm = new MainModules();
+            mm.Show();
+            this.Dispose();
+        }
+
+        private void searchModuleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchModule sm = new SearchModule();
+            sm.Show();
+            this.Dispose();
         }
     }
 }

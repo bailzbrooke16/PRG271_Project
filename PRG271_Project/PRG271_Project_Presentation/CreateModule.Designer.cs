@@ -36,6 +36,8 @@
             searchStudentToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
+            viewModulesToolStripMenuItem = new ToolStripMenuItem();
+            searchModuleToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             label2 = new Label();
             txt_name = new TextBox();
@@ -53,7 +55,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(810, 40);
+            menuStrip1.Size = new Size(810, 42);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -61,7 +63,7 @@
             // 
             studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 36);
+            studentsToolStripMenuItem.Size = new Size(127, 38);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
@@ -94,9 +96,9 @@
             // 
             // modulesToolStripMenuItem
             // 
-            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
+            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem, viewModulesToolStripMenuItem, searchModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 36);
+            modulesToolStripMenuItem.Size = new Size(127, 38);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -105,6 +107,20 @@
             createModuleToolStripMenuItem.Size = new Size(359, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
             createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
+            // 
+            // viewModulesToolStripMenuItem
+            // 
+            viewModulesToolStripMenuItem.Name = "viewModulesToolStripMenuItem";
+            viewModulesToolStripMenuItem.Size = new Size(359, 44);
+            viewModulesToolStripMenuItem.Text = "View Modules";
+            viewModulesToolStripMenuItem.Click += viewModulesToolStripMenuItem_Click;
+            // 
+            // searchModuleToolStripMenuItem
+            // 
+            searchModuleToolStripMenuItem.Name = "searchModuleToolStripMenuItem";
+            searchModuleToolStripMenuItem.Size = new Size(359, 44);
+            searchModuleToolStripMenuItem.Text = "Search Module";
+            searchModuleToolStripMenuItem.Click += searchModuleToolStripMenuItem_Click;
             // 
             // label1
             // 
@@ -215,5 +231,7 @@
         private TextBox txt_url;
         private Label label4;
         private Button btn_create;
+        private ToolStripMenuItem viewModulesToolStripMenuItem;
+        private ToolStripMenuItem searchModuleToolStripMenuItem;
     }
 }

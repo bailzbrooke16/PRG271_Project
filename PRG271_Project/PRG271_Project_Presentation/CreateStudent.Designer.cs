@@ -33,8 +33,11 @@
             viewStudentsToolStripMenuItem = new ToolStripMenuItem();
             createStudentToolStripMenuItem = new ToolStripMenuItem();
             linkModulesToolStripMenuItem = new ToolStripMenuItem();
+            searchStudentToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
+            viewModulesToolStripMenuItem = new ToolStripMenuItem();
+            searchModulesToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -50,7 +53,6 @@
             txt_address = new TextBox();
             Create = new Button();
             lbl_error = new Label();
-            searchStudentToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -74,27 +76,34 @@
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(308, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(359, 44);
+            createStudentToolStripMenuItem.Size = new Size(308, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(359, 44);
+            linkModulesToolStripMenuItem.Size = new Size(308, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
+            // searchStudentToolStripMenuItem
+            // 
+            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
+            searchStudentToolStripMenuItem.Size = new Size(308, 44);
+            searchStudentToolStripMenuItem.Text = "Search Student";
+            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
+            // 
             // modulesToolStripMenuItem
             // 
-            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
+            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem, viewModulesToolStripMenuItem, searchModulesToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
             modulesToolStripMenuItem.Size = new Size(127, 38);
             modulesToolStripMenuItem.Text = "Modules";
@@ -102,8 +111,23 @@
             // createModuleToolStripMenuItem
             // 
             createModuleToolStripMenuItem.Name = "createModuleToolStripMenuItem";
-            createModuleToolStripMenuItem.Size = new Size(306, 44);
+            createModuleToolStripMenuItem.Size = new Size(359, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
+            createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
+            // 
+            // viewModulesToolStripMenuItem
+            // 
+            viewModulesToolStripMenuItem.Name = "viewModulesToolStripMenuItem";
+            viewModulesToolStripMenuItem.Size = new Size(359, 44);
+            viewModulesToolStripMenuItem.Text = "View Modules";
+            viewModulesToolStripMenuItem.Click += viewModulesToolStripMenuItem_Click;
+            // 
+            // searchModulesToolStripMenuItem
+            // 
+            searchModulesToolStripMenuItem.Name = "searchModulesToolStripMenuItem";
+            searchModulesToolStripMenuItem.Size = new Size(359, 44);
+            searchModulesToolStripMenuItem.Text = "Search Modules";
+            searchModulesToolStripMenuItem.Click += searchModulesToolStripMenuItem_Click;
             // 
             // label1
             // 
@@ -230,13 +254,6 @@
             lbl_error.Size = new Size(0, 32);
             lbl_error.TabIndex = 16;
             // 
-            // searchStudentToolStripMenuItem
-            // 
-            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
-            searchStudentToolStripMenuItem.Size = new Size(359, 44);
-            searchStudentToolStripMenuItem.Text = "Search Student";
-            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
-            // 
             // CreateStudent
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -292,5 +309,7 @@
         private Button Create;
         private Label lbl_error;
         private ToolStripMenuItem searchStudentToolStripMenuItem;
+        private ToolStripMenuItem viewModulesToolStripMenuItem;
+        private ToolStripMenuItem searchModulesToolStripMenuItem;
     }
 }

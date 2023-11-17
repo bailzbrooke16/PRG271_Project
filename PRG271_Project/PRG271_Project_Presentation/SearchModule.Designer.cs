@@ -116,7 +116,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 42);
+            menuStrip1.Size = new Size(800, 40);
             menuStrip1.TabIndex = 46;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -124,34 +124,34 @@
             // 
             studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 38);
+            studentsToolStripMenuItem.Size = new Size(127, 36);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(308, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(359, 44);
+            createStudentToolStripMenuItem.Size = new Size(308, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(359, 44);
+            linkModulesToolStripMenuItem.Size = new Size(308, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
             // 
             // searchStudentToolStripMenuItem
             // 
             searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
-            searchStudentToolStripMenuItem.Size = new Size(359, 44);
+            searchStudentToolStripMenuItem.Size = new Size(308, 44);
             searchStudentToolStripMenuItem.Text = "Search Student";
             searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
             // 
@@ -159,7 +159,7 @@
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem, viewModulesToolStripMenuItem, searchModulesToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 38);
+            modulesToolStripMenuItem.Size = new Size(127, 36);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
@@ -239,6 +239,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "SearchModule";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "SearchModule";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();

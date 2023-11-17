@@ -36,8 +36,9 @@
             searchStudentToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
-            dg_students = new DataGridView();
             viewModulesToolStripMenuItem = new ToolStripMenuItem();
+            dg_students = new DataGridView();
+            searchModuleToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dg_students).BeginInit();
             SuspendLayout();
@@ -89,7 +90,7 @@
             // 
             // modulesToolStripMenuItem
             // 
-            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem, viewModulesToolStripMenuItem });
+            modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem, viewModulesToolStripMenuItem, searchModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
             modulesToolStripMenuItem.Size = new Size(127, 38);
             modulesToolStripMenuItem.Text = "Modules";
@@ -100,6 +101,13 @@
             createModuleToolStripMenuItem.Size = new Size(359, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
             createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
+            // 
+            // viewModulesToolStripMenuItem
+            // 
+            viewModulesToolStripMenuItem.Name = "viewModulesToolStripMenuItem";
+            viewModulesToolStripMenuItem.Size = new Size(359, 44);
+            viewModulesToolStripMenuItem.Text = "View Modules";
+            viewModulesToolStripMenuItem.Click += viewModulesToolStripMenuItem_Click;
             // 
             // dg_students
             // 
@@ -113,12 +121,12 @@
             dg_students.CellContentClick += dg_students_CellContentClick;
             dg_students.CellEndEdit += dg_students_CellEndEdit;
             // 
-            // viewModulesToolStripMenuItem
+            // searchModuleToolStripMenuItem
             // 
-            viewModulesToolStripMenuItem.Name = "viewModulesToolStripMenuItem";
-            viewModulesToolStripMenuItem.Size = new Size(359, 44);
-            viewModulesToolStripMenuItem.Text = "View Modules";
-            viewModulesToolStripMenuItem.Click += viewModulesToolStripMenuItem_Click;
+            searchModuleToolStripMenuItem.Name = "searchModuleToolStripMenuItem";
+            searchModuleToolStripMenuItem.Size = new Size(359, 44);
+            searchModuleToolStripMenuItem.Text = "Search Module";
+            searchModuleToolStripMenuItem.Click += searchModuleToolStripMenuItem_Click;
             // 
             // MainForm
             // 
@@ -150,5 +158,6 @@
         private ToolStripMenuItem linkModulesToolStripMenuItem;
         private ToolStripMenuItem searchStudentToolStripMenuItem;
         private ToolStripMenuItem viewModulesToolStripMenuItem;
+        private ToolStripMenuItem searchModuleToolStripMenuItem;
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PRG271_Project_DataLayer.Models;
+using PRG271_Project_Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,8 +14,10 @@ namespace PRG271_Project_Presentation
 {
     public partial class CreateModule : Form
     {
+        private ModuleService _moduleService;
         public CreateModule()
         {
+            this._moduleService = new ModuleService();
             InitializeComponent();
         }
 
@@ -50,6 +54,36 @@ namespace PRG271_Project_Presentation
             SearchStudent ss = new SearchStudent();
             this.Dispose();
             ss.Show();
+        }
+
+        private void btn_create_Click(object sender, EventArgs e)
+        {
+
+            string name = this.txt_name.Text;
+            string description = this.txt_description.Text;
+            string url = this.txt_url.Text;
+
+            if(name != "")
+            {
+                if(description != "")
+                {
+                    if(url != "")
+                    {
+                        Module newModule = new Module()
+                        {
+                            Name = name,
+                            Description = description,
+                            URLLink = url
+                        };
+                        this._moduleService.CreateModule(newModule);
+                        MainForm mf = new MainForm();
+                        this.Dispose();
+                        mf.Show();
+                    }
+                }
+            }
+
+           
         }
     }
 }

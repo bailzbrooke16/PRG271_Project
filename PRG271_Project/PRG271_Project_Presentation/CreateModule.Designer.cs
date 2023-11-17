@@ -33,10 +33,17 @@
             viewStudentsToolStripMenuItem = new ToolStripMenuItem();
             createStudentToolStripMenuItem = new ToolStripMenuItem();
             linkModulesToolStripMenuItem = new ToolStripMenuItem();
+            searchStudentToolStripMenuItem = new ToolStripMenuItem();
             modulesToolStripMenuItem = new ToolStripMenuItem();
             createModuleToolStripMenuItem = new ToolStripMenuItem();
             label1 = new Label();
-            searchStudentToolStripMenuItem = new ToolStripMenuItem();
+            label2 = new Label();
+            txt_name = new TextBox();
+            txt_description = new TextBox();
+            label3 = new Label();
+            txt_url = new TextBox();
+            label4 = new Label();
+            btn_create = new Button();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +53,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { studentsToolStripMenuItem, modulesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(810, 42);
+            menuStrip1.Size = new Size(810, 40);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -54,41 +61,48 @@
             // 
             studentsToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { viewStudentsToolStripMenuItem, createStudentToolStripMenuItem, linkModulesToolStripMenuItem, searchStudentToolStripMenuItem });
             studentsToolStripMenuItem.Name = "studentsToolStripMenuItem";
-            studentsToolStripMenuItem.Size = new Size(127, 38);
+            studentsToolStripMenuItem.Size = new Size(127, 36);
             studentsToolStripMenuItem.Text = "Students";
             // 
             // viewStudentsToolStripMenuItem
             // 
             viewStudentsToolStripMenuItem.Name = "viewStudentsToolStripMenuItem";
-            viewStudentsToolStripMenuItem.Size = new Size(359, 44);
+            viewStudentsToolStripMenuItem.Size = new Size(308, 44);
             viewStudentsToolStripMenuItem.Text = "View Students";
             viewStudentsToolStripMenuItem.Click += viewStudentsToolStripMenuItem_Click;
             // 
             // createStudentToolStripMenuItem
             // 
             createStudentToolStripMenuItem.Name = "createStudentToolStripMenuItem";
-            createStudentToolStripMenuItem.Size = new Size(359, 44);
+            createStudentToolStripMenuItem.Size = new Size(308, 44);
             createStudentToolStripMenuItem.Text = "Create Student";
             createStudentToolStripMenuItem.Click += createStudentToolStripMenuItem_Click;
             // 
             // linkModulesToolStripMenuItem
             // 
             linkModulesToolStripMenuItem.Name = "linkModulesToolStripMenuItem";
-            linkModulesToolStripMenuItem.Size = new Size(359, 44);
+            linkModulesToolStripMenuItem.Size = new Size(308, 44);
             linkModulesToolStripMenuItem.Text = "Link Modules";
             linkModulesToolStripMenuItem.Click += linkModulesToolStripMenuItem_Click;
+            // 
+            // searchStudentToolStripMenuItem
+            // 
+            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
+            searchStudentToolStripMenuItem.Size = new Size(308, 44);
+            searchStudentToolStripMenuItem.Text = "Search Student";
+            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
             // 
             // modulesToolStripMenuItem
             // 
             modulesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { createModuleToolStripMenuItem });
             modulesToolStripMenuItem.Name = "modulesToolStripMenuItem";
-            modulesToolStripMenuItem.Size = new Size(127, 38);
+            modulesToolStripMenuItem.Size = new Size(127, 36);
             modulesToolStripMenuItem.Text = "Modules";
             // 
             // createModuleToolStripMenuItem
             // 
             createModuleToolStripMenuItem.Name = "createModuleToolStripMenuItem";
-            createModuleToolStripMenuItem.Size = new Size(306, 44);
+            createModuleToolStripMenuItem.Size = new Size(359, 44);
             createModuleToolStripMenuItem.Text = "Create Module";
             createModuleToolStripMenuItem.Click += createModuleToolStripMenuItem_Click;
             // 
@@ -102,18 +116,76 @@
             label1.TabIndex = 3;
             label1.Text = "Create Module";
             // 
-            // searchStudentToolStripMenuItem
+            // label2
             // 
-            searchStudentToolStripMenuItem.Name = "searchStudentToolStripMenuItem";
-            searchStudentToolStripMenuItem.Size = new Size(359, 44);
-            searchStudentToolStripMenuItem.Text = "Search Student";
-            searchStudentToolStripMenuItem.Click += searchStudentToolStripMenuItem_Click;
+            label2.AutoSize = true;
+            label2.Location = new Point(97, 196);
+            label2.Name = "label2";
+            label2.Size = new Size(168, 32);
+            label2.TabIndex = 4;
+            label2.Text = "Module Name";
+            // 
+            // txt_name
+            // 
+            txt_name.Location = new Point(341, 199);
+            txt_name.Name = "txt_name";
+            txt_name.Size = new Size(294, 39);
+            txt_name.TabIndex = 5;
+            // 
+            // txt_description
+            // 
+            txt_description.Location = new Point(341, 278);
+            txt_description.Name = "txt_description";
+            txt_description.Size = new Size(294, 39);
+            txt_description.TabIndex = 6;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(97, 278);
+            label3.Name = "label3";
+            label3.Size = new Size(225, 32);
+            label3.TabIndex = 7;
+            label3.Text = "Module Description";
+            // 
+            // txt_url
+            // 
+            txt_url.Location = new Point(344, 353);
+            txt_url.Name = "txt_url";
+            txt_url.Size = new Size(293, 39);
+            txt_url.TabIndex = 8;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(97, 353);
+            label4.Name = "label4";
+            label4.Size = new Size(134, 32);
+            label4.TabIndex = 9;
+            label4.Text = "Module Url";
+            // 
+            // btn_create
+            // 
+            btn_create.Location = new Point(233, 456);
+            btn_create.Name = "btn_create";
+            btn_create.Size = new Size(295, 81);
+            btn_create.TabIndex = 10;
+            btn_create.Text = "Create";
+            btn_create.UseVisualStyleBackColor = true;
+            btn_create.Click += btn_create_Click;
             // 
             // CreateModule
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 678);
+            ClientSize = new Size(810, 765);
+            Controls.Add(btn_create);
+            Controls.Add(label4);
+            Controls.Add(txt_url);
+            Controls.Add(label3);
+            Controls.Add(txt_description);
+            Controls.Add(txt_name);
+            Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Name = "CreateModule";
@@ -136,5 +208,12 @@
         private Label label1;
         private ToolStripMenuItem linkModulesToolStripMenuItem;
         private ToolStripMenuItem searchStudentToolStripMenuItem;
+        private Label label2;
+        private TextBox txt_name;
+        private TextBox txt_description;
+        private Label label3;
+        private TextBox txt_url;
+        private Label label4;
+        private Button btn_create;
     }
 }

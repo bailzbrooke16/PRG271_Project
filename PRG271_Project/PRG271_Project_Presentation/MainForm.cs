@@ -93,11 +93,14 @@ namespace PRG271_Project_Presentation
             //Get where the change occured
             int rowIndex = e.RowIndex;
 
-
             //Get the student that the change occured to
             Student modifiedStudent = this._studentService.GetStudents()[rowIndex];
-            this._studentService.DeleteStudent(modifiedStudent.Number);
-            this.dg_students.DataSource = this._studentService.GetStudents();
+
+            if (dataGridView.CurrentCell.EditedFormattedValue == "Delete") {
+                this._studentService.DeleteStudent(modifiedStudent.Number);
+                this.dg_students.DataSource = this._studentService.GetStudents();
+            }
+            
         }
 
         private void searchStudentToolStripMenuItem_Click(object sender, EventArgs e)

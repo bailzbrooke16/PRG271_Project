@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRG271_Project_Presentation", "PRG271_Project_Presentation\PRG271_Project_Presentation.csproj", "{C21BFDAC-96C2-4CBD-8140-94146D0D0EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRG271_Project_Services", "PRG271_Project_Services\PRG271_Project_Services.csproj", "{5DBC30D8-B3FC-46B7-B6A8-708AD2A9013E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PRG271_Project_DataLayer", "PRG271_Project_DataLayer\PRG271_Project_DataLayer.csproj", "{F6012FAA-69E6-4515-9101-08F8A310AAB9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{13207DDA-7C9D-4267-8CFD-81F97D3E0B2A}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		..\README.md = ..\README.md
+		users.txt = users.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SQL-Scripts", "SQL-Scripts", "{445AB724-C0B3-4BB1-9EDC-6FBE6A598C5A}"
+	ProjectSection(SolutionItems) = preProject
+		Modules.sql = Modules.sql
+		Seed-Modules.sql = Seed-Modules.sql
+		Seed-Students.sql = Seed-Students.sql
+		Students.sql = Students.sql
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C21BFDAC-96C2-4CBD-8140-94146D0D0EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C21BFDAC-96C2-4CBD-8140-94146D0D0EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C21BFDAC-96C2-4CBD-8140-94146D0D0EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C21BFDAC-96C2-4CBD-8140-94146D0D0EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5DBC30D8-B3FC-46B7-B6A8-708AD2A9013E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5DBC30D8-B3FC-46B7-B6A8-708AD2A9013E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5DBC30D8-B3FC-46B7-B6A8-708AD2A9013E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5DBC30D8-B3FC-46B7-B6A8-708AD2A9013E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6012FAA-69E6-4515-9101-08F8A310AAB9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6012FAA-69E6-4515-9101-08F8A310AAB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6012FAA-69E6-4515-9101-08F8A310AAB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6012FAA-69E6-4515-9101-08F8A310AAB9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{445AB724-C0B3-4BB1-9EDC-6FBE6A598C5A} = {13207DDA-7C9D-4267-8CFD-81F97D3E0B2A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3579EE60-023F-462F-990C-67EC83FE1D18}
+	EndGlobalSection
+EndGlobal
